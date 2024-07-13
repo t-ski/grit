@@ -1,6 +1,10 @@
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 ASSERTIONS=0
 
+grit() {
+    $SCRIPT_DIR/../target/debug/grit $@
+}
+
 assert() {
     ASSERTIONS=$((ASSERTIONS + 1))
 
@@ -22,5 +26,9 @@ assert() {
 
 cd /tmp/grit-test-repo
 for FILE in `ls $SCRIPT_DIR/assertions | sort -g`; do
+    if [[ $FILE == *.test.sh ]]; then :
+    else continue
+    fi
+    
     source "$SCRIPT_DIR/assertions/$FILE";
 done
