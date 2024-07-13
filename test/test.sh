@@ -13,6 +13,7 @@ RUN_RESULT=$?
 
 run_helper "repo.delete"
 
+echo "";
 if [ $RUN_RESULT -eq 0 ]; then
     echo -e "\033[1m\033[32m✓ TESTS SUCCESSFUL\033[0m"
 else
