@@ -1,7 +1,7 @@
 REPO_DIR_PATH=/tmp/grit-test-repo
 
 if [ -d $REPO_DIR_PATH ]; then
-    source "$(dirname "$0")/_delete.sh"
+    source "$(test_dir)/_delete.sh"
 fi
 
 mkdir $REPO_DIR_PATH

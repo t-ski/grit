@@ -1,8 +1,11 @@
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 ASSERTIONS=0
 
+test_dir() {
+    echo $(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+}
+
 grit() {
-    $SCRIPT_DIR/../target/debug/grit $@
+    $(test_dir)/../target/debug/grit $@
 }
 
 assert() {
@@ -24,11 +27,13 @@ assert() {
     exit 1
 }
 
+cargo build --manifest-path="$(test_dir)/../Cargo.toml"
+
 cd /tmp/grit-test-repo
-for FILE in `ls $SCRIPT_DIR/assertions | sort -g`; do
+for FILE in `ls $(test_dir)/assertions | sort -g`; do
     if [[ $FILE == *.test.sh ]]; then :
     else continue
     fi
     
-    source "$SCRIPT_DIR/assertions/$FILE";
+    source "$(test_dir)/assertions/$FILE";
 done
