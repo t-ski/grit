@@ -3,5 +3,5 @@ Usage: grit <command> [--<arg:key>|-<arg:shorthand> *?]*
 
 → <command>
 
-• example       Lorem ipsum dolor sit amet.
+• patch         Start development of a patch.
 ";

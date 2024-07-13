@@ -23,7 +23,7 @@ fn main() {
     }
     
     match &*command_key {
-        "example" => interfaces::example::run(),
+        "patch" => interfaces::patch::run(),
         _ => panic!("Unknown command")
     }
 }
