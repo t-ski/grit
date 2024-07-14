@@ -1,6 +1,6 @@
 use std::process::exit;
 
-pub mod _help;
+pub mod help;
 pub mod args;
 pub mod git;
 pub mod interfaces;
@@ -18,12 +18,19 @@ fn main() {
 
     let command_key: String = command.unwrap();
     if command_key == "help" {
-        println!("{}", _help::TEXT);
+        println!("{}", help::TEXT);
         exit(0);
     }
     
     match &*command_key {
         "patch" => interfaces::patch::run(),
+        "minor" => interfaces::minor::run(),
+        "major" => interfaces::major::run(),
+
+        "complete" => interfaces::complete::run(),
+
+        "status" => interfaces::status::run(),
+
         _ => panic!("Unknown command")
     }
 }

@@ -3,5 +3,8 @@ name = "grit"
 version = "0.1.0"
 edition = "2021"
 
+[dependencies]
+regex = "^1.0.0"
+
 [dev-dependencies]
 rusty-hook = "^0.11.2"
