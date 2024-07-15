@@ -1,7 +1,9 @@
+source "$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)/__dirname.sh"
+
 REPO_DIR_PATH=/tmp/grit-test-repo
 
 if [ -d $REPO_DIR_PATH ]; then
-    source "$(test_dir)/_delete.sh"
+    source "$(dirname)/_repo.delete.sh"
 fi
 
 mkdir $REPO_DIR_PATH

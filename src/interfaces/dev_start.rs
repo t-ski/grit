@@ -1,11 +1,11 @@
 use std::time::{UNIX_EPOCH, SystemTime};
 
-use crate::{args, git};
+use crate::{args, exit, git};
 
 
 pub fn run(branch_prefix: &str) {
     if super::dev_utils::is_on_development_branch() {
-        panic!("You are already on a grit development branch");
+        exit::exit_with_error("You are already on a grit development branch");
     }
 
     let name: String = args::parse_option("name", Some("n"))
