@@ -13,7 +13,7 @@ Intuitive [Semver](https://semver.org) based git client abstraction.
 ``` console
 bash <(curl -s https://raw.githubusercontent.com/t-ski/grit/main/installer/install.mac.sh) 0.1.0
 ```
-> 💡 &hairsp; The grit version to install must be specified through the trailing argument([browse versions](https://github.com/t-ski/grit/releases)).
+> 💡 &hairsp; The grit version to install must be specified through the trailing argument ([browse versions](https://github.com/t-ski/grit/releases)).
 
 ## Usage Synopsis
 
@@ -65,11 +65,11 @@ Completing a previously started incremental development includes to a few steps:
 grit complete [--target|-t *]? [--keep-branch]? 
 ```
 
-> 💡 &hairsp; Based on the generated tag, CI pipelines can easily infere potential releases.
+> 💡 &hairsp; Based on the generated tag, CI pipelines can easily infer releases.
 
 ## Redeclare Development
 
-A development might deviate from the original declared purpose. For instance when a patch introduces an additional feature. Instead of inverting the branching behaviour, grit provides a Semver purpose redeclaration command.
+A development might deviate from the original declared purpose. For instance, when a patch introduces an additional feature. Instead of inverting the branching behaviour, grit provides a Semver purpose redeclaration command.
 
 ``` console
 grit redeclare [patch|minor|major]
