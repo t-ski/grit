@@ -17,7 +17,7 @@ bash <(curl -s https://raw.githubusercontent.com/t-ski/grit/main/installer/insta
 
 ## Usage Synopsis
 
-grit purposefully integrates with the Semver approach. The grit command line interface is accordingly designed. The atomic grit workflow is a development that is either a patch, minor, or major increment (see Semver). The fundamental design principle for grit is locality. This means, the HEAD is always on a branch linked with a Semver development declaration (such as a patch). Related commands only are therefore also linked with the current development state.
+grit purposefully integrates with the Semver approach. The grit command line interface is accordingly designed. The atomic grit workflow is a development that is either a patch, minor, or major increment (see Semver). The fundamental design principle for grit is locality. This means, the HEAD is always on a branch linked with a Semver development declaration (such as a patch).
 
 ```
 grit <command> [<arg:positional>]* [--<arg:key>|-<arg:shorthand> *?]*
