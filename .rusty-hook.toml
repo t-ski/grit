@@ -1,5 +1,5 @@
 [hooks]
-pre-commit = "./script.sh test"
+pre-commit = "./script.sh build && ./script.sh test"
 
 [logging]
 verbose = true

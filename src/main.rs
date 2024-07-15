@@ -7,29 +7,22 @@ pub mod interfaces;
 
 
 fn main() {
-    if git::exists() == false {
+    if git::is_installed() == false {
         panic!("git not found (requires global binary access)");
     }
 
-    let command: Option<String> = args::parse_positional(0);
-    if command == None {
-        panic!("Missing command");
-    }
-
-    let command_key: String = command.unwrap();
-    if command_key == "help" {
+    let command: &str = &*args::parse_positional(0).expect("Missing command");
+    if command == "help" {
         println!("{}", help::TEXT);
         exit(0);
     }
     
-    match &*command_key {
-        "patch" => interfaces::patch::run(),
-        "minor" => interfaces::minor::run(),
-        "major" => interfaces::major::run(),
+    match command {
+        "patch" | "minor" | "major" => interfaces::dev_start::run(command),
+        "complete" => interfaces::dev_complete::run(),
+        "redeclare" => interfaces::dev_redeclare::run(),
 
-        "complete" => interfaces::complete::run(),
-
-        "status" => interfaces::status::run(),
+        "status" => interfaces::util_status::run(),
 
         _ => panic!("Unknown command")
     }
