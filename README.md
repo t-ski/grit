@@ -11,9 +11,9 @@ Intuitive [Semver](https://semver.org) based git client abstraction.
 > 🖥️ &hairsp; grit does currently support macOS host systems.
 
 ``` console
-bash <(curl -s https://raw.githubusercontent.com/t-ski/grit/main/installer/install.mac.sh) 1.0.0
+bash <(curl -s https://raw.githubusercontent.com/t-ski/grit/main/installer/install.mac.sh) 0.1.0
 ```
-> 💡 &hairsp; Note the version argument at the end ([browse versions](https://github.com/t-ski/grit/releases)).
+> 💡 &hairsp; The grit version to install must be specified through the trailing argument([browse versions](https://github.com/t-ski/grit/releases)).
 
 ## Usage Synopsis
 

@@ -18,5 +18,13 @@ Usage: grit <command> [--<arg:key>|-<arg:shorthand> *?]*
     Options:
     --target, -t    Name of target branch if different than main.
 
+• redeclare         Complete the current development.
+
+    Positionals:
+    1:              Declare Semver purpose to up- or downgrade to:
+                    [patch|minor|major]
+
+• abort             Abort the current development.
+
 • status            Display status information.
 ";
