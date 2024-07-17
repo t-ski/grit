@@ -1,8 +1,10 @@
 <a href="https://github.com/t-ski/grit">
-  <img src="./readme/grit-hero.png" width="300" alt="grit Logo">
+  <img src="./readme/grit-hero.png" width="300" alt="grit">
 </a><br><br>
 
 Intuitive [Semver](https://semver.org) based git client abstraction.
+
+# grit
 
 ## Installation
 
